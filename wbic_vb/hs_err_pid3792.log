@@ -1,0 +1,465 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00000000734604fa, pid=3792, tid=4320
+#
+# JRE version: 7.0_11-b21
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (23.6-b04 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  0x00000000734604fa
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000070a35000):  JavaThread "Thread-338" [_thread_in_native, id=4320, stack(0x0000000134000000,0x0000000138000000)]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x0000000000000013
+
+Registers:
+RAX=0x0000000000024775, RBX=0x0000000000000002, RCX=0x0000000024775ff0, RDX=0x0000000000000006
+RSP=0x0000000137ffd450, RBP=0x0000000024775000, RSI=0x0000000024775000, RDI=0x0000000000000000
+R8 =0x0000000000000001, R9 =0x0000000000000001, R10=0x0000000000000000, R11=0x0000000137ffd550
+R12=0x0000000074548730, R13=0x0000000000000000, R14=0x0000000000000001, R15=0x0000000000000000
+RIP=0x00000000734604fa, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x0000000137ffd450)
+0x0000000137ffd450:   0000000000000000 000000007345f7de
+0x0000000137ffd460:   8000000000000001 0000000000000000
+0x0000000137ffd470:   8000000000000001 000000006db11600
+0x0000000137ffd480:   000000006db12c7a 00000000041f0000
+0x0000000137ffd490:   0000000000000000 000000007345f2e3
+0x0000000137ffd4a0:   0000000000000002 0000000024775ff0
+0x0000000137ffd4b0:   0000000137ffd520 00000000041f0000
+0x0000000137ffd4c0:   000000008007000e 000007fefb597d64
+0x0000000137ffd4d0:   0000000000000006 0000000000000003
+0x0000000137ffd4e0:   000000006db11600 00000000248a0088
+0x0000000137ffd4f0:   00000000248f7460 000007fefb58d710
+0x0000000137ffd500:   0000000000220004 000000006db12c82
+0x0000000137ffd510:   000000006db12c7a 0000000024831d60
+0x0000000137ffd520:   0000000000000000 00000000248f6790
+0x0000000137ffd530:   000000006db12c82 0000000000000011
+0x0000000137ffd540:   00000000248f6701 0000000000000000 
+
+Instructions: (pc=0x00000000734604fa)
+0x00000000734604da:   81 e3 ff 07 00 00 48 03 db 49 39 b4 dc d0 08 00
+0x00000000734604ea:   00 75 28 49 8b 9c dc d8 08 00 00 48 85 db 74 20
+0x00000000734604fa:   0f b6 43 11 41 3b c0 75 17 41 83 f8 01 0f 85 80
+0x000000007346050a:   01 00 00 ff 43 18 e9 78 01 00 00 48 8b 5c 24 50 
+
+
+Register to memory mapping:
+
+RAX=0x0000000000024775 is an unknown value
+RBX=0x0000000000000002 is an unknown value
+RCX=0x0000000024775ff0 is an unknown value
+RDX=0x0000000000000006 is an unknown value
+RSP=0x0000000137ffd450 is pointing into the stack for thread: 0x0000000070a35000
+RBP=0x0000000024775000 is an unknown value
+RSI=0x0000000024775000 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000000001 is an unknown value
+R9 =0x0000000000000001 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000137ffd550 is pointing into the stack for thread: 0x0000000070a35000
+R12=0x0000000074548730 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x0000000000000001 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x0000000134000000,0x0000000138000000],  sp=0x0000000137ffd450,  free space=65525k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x00000000734604fa
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.mathworks.util.NativeJava.showNativeFileDialogMulti(JZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;I)Ljava/lang/Object;+0
+j  com.mathworks.mwswing.MJFileChooserPerPlatform$RunnableNativeDispatch.runNative()V+37
+j  com.mathworks.mwswing.MJFileChooserPerPlatform$RunnableNativeDispatch.runWindows()V+22
+j  com.mathworks.mwswing.MJFileChooserPerPlatform$RunnableNativeDispatch.run()V+7
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x0000000070a35000 JavaThread "Thread-338" [_thread_in_native, id=4320, stack(0x0000000134000000,0x0000000138000000)]
+  0x0000000070a37000 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=1664, stack(0x0000000130000000,0x0000000134000000)]
+  0x0000000070a35800 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=5184, stack(0x000000012c000000,0x0000000130000000)]
+  0x0000000070a36800 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=5776, stack(0x0000000128000000,0x000000012c000000)]
+  0x0000000070a2b000 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=5396, stack(0x0000000108000000,0x000000010c000000)]
+  0x0000000070a2e000 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=4892, stack(0x0000000104000000,0x0000000108000000)]
+  0x0000000070a33800 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=3972, stack(0x0000000100000000,0x0000000104000000)]
+  0x0000000070a32800 JavaThread "Code Analyzer updating thread" [_thread_blocked, id=5684, stack(0x00000000c8000000,0x00000000cc000000)]
+  0x0000000070a32000 JavaThread "Prefs Updater" daemon [_thread_blocked, id=5596, stack(0x0000000094000000,0x0000000098000000)]
+  0x0000000070a31000 JavaThread "Foxtrot Single Worker Thread #1" daemon [_thread_blocked, id=4344, stack(0x0000000114000000,0x0000000118000000)]
+  0x0000000070a2d800 JavaThread "Swing-Shell" daemon [_thread_blocked, id=5624, stack(0x0000000124000000,0x0000000128000000)]
+  0x000000006428a800 JavaThread "Active Reference Queue Daemon" daemon [_thread_blocked, id=3292, stack(0x00000000dc000000,0x00000000e0000000)]
+  0x000000006428a000 JavaThread "Timer-1" daemon [_thread_blocked, id=1600, stack(0x00000000d8000000,0x00000000dc000000)]
+  0x0000000064289000 JavaThread "ClipboardMonitor Timer" daemon [_thread_blocked, id=5512, stack(0x00000000d4000000,0x00000000d8000000)]
+  0x0000000064285000 JavaThread "Explorer NavigationContext request queue" daemon [_thread_blocked, id=5212, stack(0x00000000d0000000,0x00000000d4000000)]
+  0x0000000064283000 JavaThread "AddressBar directory emptiness poller" daemon [_thread_blocked, id=3832, stack(0x00000000c4000000,0x00000000c8000000)]
+  0x0000000064282000 JavaThread "Explorer Refresh Service 681290585" daemon [_thread_blocked, id=2160, stack(0x00000000c0000000,0x00000000c4000000)]
+  0x0000000064281800 JavaThread "TimerQueue" daemon [_thread_blocked, id=5884, stack(0x00000000b0000000,0x00000000b4000000)]
+  0x0000000064280800 JavaThread "Thread-3" daemon [_thread_blocked, id=3356, stack(0x00000000a0000000,0x00000000a4000000)]
+  0x0000000063a6b000 JavaThread "FelixPackageAdmin" daemon [_thread_blocked, id=2624, stack(0x00000000ac000000,0x00000000b0000000)]
+  0x0000000063ca8000 JavaThread "FelixStartLevel" daemon [_thread_blocked, id=5676, stack(0x00000000a8000000,0x00000000ac000000)]
+  0x0000000063cb1000 JavaThread "FelixDispatchQueue" daemon [_thread_blocked, id=5692, stack(0x00000000a4000000,0x00000000a8000000)]
+  0x0000000063df0800 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=6028, stack(0x000000009c000000,0x00000000a0000000)]
+  0x0000000063764000 JavaThread "com.google.common.base.internal.Finalizer" daemon [_thread_blocked, id=4300, stack(0x0000000098000000,0x000000009c000000)]
+  0x00000000636c6000 JavaThread "AWT-Windows" daemon [_thread_in_native, id=1788, stack(0x0000000090000000,0x0000000094000000)]
+  0x000000006373a000 JavaThread "AWT-Shutdown" [_thread_blocked, id=4488, stack(0x000000008c000000,0x0000000090000000)]
+  0x00000000636af000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=5088, stack(0x0000000088000000,0x000000008c000000)]
+  0x0000000063524000 JavaThread "Timer-0" [_thread_blocked, id=4092, stack(0x0000000084000000,0x0000000088000000)]
+  0x00000000634c8000 JavaThread "EventMgr Dispatcher" daemon [_thread_in_native, id=4280, stack(0x0000000080000000,0x0000000084000000)]
+  0x0000000026768800 JavaThread "Service Thread" daemon [_thread_blocked, id=1768, stack(0x000000005c9c0000,0x00000000609c0000)]
+  0x0000000026767800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=4528, stack(0x00000000589c0000,0x000000005c9c0000)]
+  0x0000000026763000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=692, stack(0x00000000549c0000,0x00000000589c0000)]
+  0x0000000026762000 JavaThread "Attach Listener" daemon [_thread_blocked, id=788, stack(0x00000000509c0000,0x00000000549c0000)]
+  0x00000000266dc000 JavaThread "Finalizer" daemon [_thread_blocked, id=5552, stack(0x000000004c9c0000,0x00000000509c0000)]
+  0x00000000266cc800 JavaThread "Reference Handler" daemon [_thread_blocked, id=3344, stack(0x00000000489c0000,0x000000004c9c0000)]
+  0x00000000233c6000 JavaThread "main" [_thread_in_native, id=6132, stack(0x0000000000030000,0x0000000004030000)]
+
+Other Threads:
+  0x00000000266c9800 VMThread [stack: 0x00000000449c0000,0x00000000489c0000] [id=4536]
+  0x00000000267b7800 WatcherThread [stack: 0x00000000779e0000,0x000000007b9e0000] [id=5520]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 28288K, used 16700K [0x00000000fa000000, 0x00000000fd530000, 0x0000000100000000)
+  eden space 20800K, 44% used [0x00000000fa000000,0x00000000fa8ff7f0,0x00000000fb450000)
+  from space 7488K, 99% used [0x00000000fb450000,0x00000000fbb9f918,0x00000000fbba0000)
+  to   space 16640K, 0% used [0x00000000fc4f0000,0x00000000fc4f0000,0x00000000fd530000)
+ ParOldGen       total 85632K, used 69067K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec372c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58830K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e3973ab8,0x00000000e58b0000)
+
+Card table byte_map: [0x0000000029dd0000,0x0000000029ee0000] byte_map_base: 0x00000000296d0000
+
+Polling page: 0x0000000009420000
+
+Code Cache  [0x0000000026d10000, 0x00000000273e0000, 0x0000000029d10000)
+ total_blobs=2806 nmethods=2146 adapters=607 free_code_cache=42380Kb largest_free_block=43212736
+
+Compilation events (10 events):
+Event: 4580.654 Thread 0x0000000026767800 2344             org.netbeans.editor.DrawEngine::drawFragment (510 bytes)
+Event: 4580.679 Thread 0x0000000026767800 nmethod 2344 0x00000000270b8550 code [0x00000000270b87a0, 0x00000000270b9220]
+Event: 4583.036 Thread 0x0000000026763000 2345             sun.awt.image.IntegerComponentRaster::<init> (272 bytes)
+Event: 4583.060 Thread 0x0000000026763000 nmethod 2345 0x00000000272605d0 code [0x0000000027260760, 0x0000000027260f38]
+Event: 4586.881 Thread 0x0000000026767800 2346             com.mathworks.widgets.text.mcode.MTreeUtils::getOtherIDNodesWithDifferentSymbolIndex (82 bytes)
+Event: 4586.883 Thread 0x0000000026763000 2347             com.mathworks.widgets.text.mcode.MTreeUtils::getOtherNodesAndPositionsWithSameSymbolIndex (99 bytes)
+Event: 4586.900 Thread 0x0000000026763000 nmethod 2347 0x00000000272bd810 code [0x00000000272bd9e0, 0x00000000272bdf40]
+Event: 4586.903 Thread 0x0000000026767800 nmethod 2346 0x00000000272bc550 code [0x00000000272bc700, 0x00000000272bceb8]
+Event: 4587.469 Thread 0x0000000026763000 2348   !         com.mathworks.widgets.text.mcode.variables.VariableHighlightUtils::getIDNodeNamesAndPositionsNotID (140 bytes)
+Event: 4587.492 Thread 0x0000000026763000 nmethod 2348 0x00000000270b6b10 code [0x00000000270b6d60, 0x00000000270b76e8]
+
+GC Heap History (10 events):
+Event: 4559.301 GC heap before
+{Heap before GC invocations=141 (full 2):
+ PSYoungGen      total 40256K, used 20801K [0x00000000fa000000, 0x00000000fdb90000, 0x0000000100000000)
+  eden space 20032K, 87% used [0x00000000fa000000,0x00000000fb118eb0,0x00000000fb390000)
+  from space 20224K, 16% used [0x00000000fc7d0000,0x00000000fcb07798,0x00000000fdb90000)
+  to   space 20480K, 0% used [0x00000000fb390000,0x00000000fb390000,0x00000000fc790000)
+ ParOldGen       total 85632K, used 68971K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec35ac38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58602K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e393ab70,0x00000000e58b0000)
+Event: 4559.306 GC heap after
+Heap after GC invocations=141 (full 2):
+ PSYoungGen      total 40512K, used 1624K [0x00000000fa000000, 0x00000000fdc00000, 0x0000000100000000)
+  eden space 20032K, 0% used [0x00000000fa000000,0x00000000fa000000,0x00000000fb390000)
+  from space 20480K, 7% used [0x00000000fb390000,0x00000000fb526178,0x00000000fc790000)
+  to   space 20544K, 0% used [0x00000000fc7f0000,0x00000000fc7f0000,0x00000000fdc00000)
+ ParOldGen       total 85632K, used 69003K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec362c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58602K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e393ab70,0x00000000e58b0000)
+}
+Event: 4565.463 GC heap before
+{Heap before GC invocations=142 (full 2):
+ PSYoungGen      total 40512K, used 21656K [0x00000000fa000000, 0x00000000fdc00000, 0x0000000100000000)
+  eden space 20032K, 100% used [0x00000000fa000000,0x00000000fb390000,0x00000000fb390000)
+  from space 20480K, 7% used [0x00000000fb390000,0x00000000fb526178,0x00000000fc790000)
+  to   space 20544K, 0% used [0x00000000fc7f0000,0x00000000fc7f0000,0x00000000fdc00000)
+ ParOldGen       total 85632K, used 69003K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec362c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58791K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e3969df0,0x00000000e58b0000)
+Event: 4565.466 GC heap after
+Heap after GC invocations=142 (full 2):
+ PSYoungGen      total 38464K, used 7973K [0x00000000fa000000, 0x00000000fd9a0000, 0x0000000100000000)
+  eden space 20352K, 0% used [0x00000000fa000000,0x00000000fa000000,0x00000000fb3e0000)
+  from space 18112K, 44% used [0x00000000fc7f0000,0x00000000fcfb9560,0x00000000fd9a0000)
+  to   space 19328K, 0% used [0x00000000fb3e0000,0x00000000fb3e0000,0x00000000fc6c0000)
+ ParOldGen       total 85632K, used 69019K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec366c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58791K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e3969df0,0x00000000e58b0000)
+}
+Event: 4567.648 GC heap before
+{Heap before GC invocations=143 (full 2):
+ PSYoungGen      total 38464K, used 28325K [0x00000000fa000000, 0x00000000fd9a0000, 0x0000000100000000)
+  eden space 20352K, 100% used [0x00000000fa000000,0x00000000fb3e0000,0x00000000fb3e0000)
+  from space 18112K, 44% used [0x00000000fc7f0000,0x00000000fcfb9560,0x00000000fd9a0000)
+  to   space 19328K, 0% used [0x00000000fb3e0000,0x00000000fb3e0000,0x00000000fc6c0000)
+ ParOldGen       total 85632K, used 69019K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec366c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58794K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e396a808,0x00000000e58b0000)
+Event: 4567.654 GC heap after
+Heap after GC invocations=143 (full 2):
+ PSYoungGen      total 28800K, used 8389K [0x00000000fa000000, 0x00000000fd810000, 0x0000000100000000)
+  eden space 20352K, 0% used [0x00000000fa000000,0x00000000fa000000,0x00000000fb3e0000)
+  from space 8448K, 99% used [0x00000000fb3e0000,0x00000000fbc11560,0x00000000fbc20000)
+  to   space 18304K, 0% used [0x00000000fc630000,0x00000000fc630000,0x00000000fd810000)
+ ParOldGen       total 85632K, used 69027K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec368c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58794K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e396a808,0x00000000e58b0000)
+}
+Event: 4574.872 GC heap before
+{Heap before GC invocations=144 (full 2):
+ PSYoungGen      total 28800K, used 28741K [0x00000000fa000000, 0x00000000fd810000, 0x0000000100000000)
+  eden space 20352K, 100% used [0x00000000fa000000,0x00000000fb3e0000,0x00000000fb3e0000)
+  from space 8448K, 99% used [0x00000000fb3e0000,0x00000000fbc11560,0x00000000fbc20000)
+  to   space 18304K, 0% used [0x00000000fc630000,0x00000000fc630000,0x00000000fd810000)
+ ParOldGen       total 85632K, used 69027K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec368c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58795K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e396acc8,0x00000000e58b0000)
+Event: 4574.879 GC heap after
+Heap after GC invocations=144 (full 2):
+ PSYoungGen      total 37440K, used 8562K [0x00000000fa000000, 0x00000000fd670000, 0x0000000100000000)
+  eden space 20800K, 0% used [0x00000000fa000000,0x00000000fa000000,0x00000000fb450000)
+  from space 16640K, 51% used [0x00000000fc630000,0x00000000fce8c958,0x00000000fd670000)
+  to   space 17472K, 0% used [0x00000000fb450000,0x00000000fb450000,0x00000000fc560000)
+ ParOldGen       total 85632K, used 69043K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec36cc38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58795K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e396acc8,0x00000000e58b0000)
+}
+Event: 4584.105 GC heap before
+{Heap before GC invocations=145 (full 2):
+ PSYoungGen      total 37440K, used 29362K [0x00000000fa000000, 0x00000000fd670000, 0x0000000100000000)
+  eden space 20800K, 100% used [0x00000000fa000000,0x00000000fb450000,0x00000000fb450000)
+  from space 16640K, 51% used [0x00000000fc630000,0x00000000fce8c958,0x00000000fd670000)
+  to   space 17472K, 0% used [0x00000000fb450000,0x00000000fb450000,0x00000000fc560000)
+ ParOldGen       total 85632K, used 69043K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec36cc38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58826K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e39728f8,0x00000000e58b0000)
+Event: 4584.112 GC heap after
+Heap after GC invocations=145 (full 2):
+ PSYoungGen      total 28288K, used 7486K [0x00000000fa000000, 0x00000000fd530000, 0x0000000100000000)
+  eden space 20800K, 0% used [0x00000000fa000000,0x00000000fa000000,0x00000000fb450000)
+  from space 7488K, 99% used [0x00000000fb450000,0x00000000fbb9f918,0x00000000fbba0000)
+  to   space 16640K, 0% used [0x00000000fc4f0000,0x00000000fc4f0000,0x00000000fd530000)
+ ParOldGen       total 85632K, used 69067K [0x00000000e8000000, 0x00000000ed3a0000, 0x00000000fa000000)
+  object space 85632K, 80% used [0x00000000e8000000,0x00000000ec372c38,0x00000000ed3a0000)
+ PSPermGen       total 90816K, used 58826K [0x00000000e0000000, 0x00000000e58b0000, 0x00000000e8000000)
+  object space 90816K, 64% used [0x00000000e0000000,0x00000000e39728f8,0x00000000e58b0000)
+}
+
+Deoptimization events (10 events):
+Event: 4576.710 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027394f5c
+Event: 4576.710 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027394f5c
+Event: 4576.710 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027394f5c
+Event: 4576.917 Thread 0x0000000063df0800 Uncommon trap -58 fr.pc 0x0000000027375bdc
+Event: 4578.518 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027163bac
+Event: 4578.519 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027163bac
+Event: 4578.939 Thread 0x0000000063df0800 Uncommon trap -58 fr.pc 0x00000000270aae38
+Event: 4578.939 Thread 0x0000000063df0800 Uncommon trap -58 fr.pc 0x0000000026f7c980
+Event: 4580.143 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027163bac
+Event: 4580.143 Thread 0x0000000063df0800 Uncommon trap -34 fr.pc 0x0000000027163bac
+
+Internal exceptions (10 events):
+Event: 4561.671 Thread 0x0000000063df0800 Threw 0x00000000faf421b8 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4565.404 Thread 0x0000000063df0800 Threw 0x00000000fb146f38 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4565.408 Thread 0x0000000063df0800 Threw 0x00000000fb170208 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4565.448 Thread 0x0000000063df0800 Threw 0x00000000fb2dbb78 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4565.448 Thread 0x0000000063df0800 Threw 0x00000000fb2f2230 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4576.703 Thread 0x0000000063df0800 Threw 0x00000000fa0c4588 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4576.705 Thread 0x0000000063df0800 Threw 0x00000000fa0dd230 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4576.707 Thread 0x0000000063df0800 Threw 0x00000000fa0f0fa0 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4576.732 Thread 0x0000000063df0800 Threw 0x00000000fa1b05c0 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+Event: 4580.620 Thread 0x0000000063df0800 Threw 0x00000000fa6f4018 at C:\jdk7u1_64p\jdk7u11\hotspot\src\share\vm\prims\jvm.cpp:1166
+
+Events (10 events):
+Event: 4580.143 Thread 0x0000000063df0800 DEOPT UNPACKING pc=0x0000000026d49164 sp=0x000000009fffdf98 mode 2
+Event: 4580.620 loading class 0x0000000063f5f350
+Event: 4580.620 loading class 0x0000000063f5f350 done
+Event: 4584.105 Executing VM operation: ParallelGCFailedAllocation
+Event: 4584.112 Executing VM operation: ParallelGCFailedAllocation done
+Event: 4587.493 Thread 0x0000000026763000 flushing nmethod 0x000000002736d110
+Event: 4587.493 Thread 0x0000000026763000 flushing nmethod 0x00000000273a6690
+Event: 4587.779 Thread 0x0000000070a35000 Thread added: 0x0000000070a35000
+Event: 4587.779 Executing VM operation: RevokeBias
+Event: 4587.780 Executing VM operation: RevokeBias done
+
+
+Dynamic libraries:
+0x0000000140000000 - 0x0000000140029000 	C:\Program Files\MATLAB\R2013b\bin\win64\MATLAB.exe
+0x0000000077810000 - 0x00000000779b9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000775f0000 - 0x000000007770f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd830000 - 0x000007fefd89c000 	C:\Windows\system32\KERNELBASE.dll
+0x0000000075330000 - 0x00000000753b7000 	C:\Windows\System32\SYSFER.DLL
+0x000000006f060000 - 0x000000006f3dc000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwservices.dll
+0x000000006fe80000 - 0x000000006ff56000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwi18n.dll
+0x000000006fe70000 - 0x000000006fe7d000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwresource_core.dll
+0x0000000065fb0000 - 0x0000000066048000 	C:\Program Files\MATLAB\R2013b\bin\win64\MSVCP100.dll
+0x00000000657f0000 - 0x00000000658c2000 	C:\Program Files\MATLAB\R2013b\bin\win64\MSVCR100.dll
+0x0000000070230000 - 0x000000007023e000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_date_time-vc100-mt-1_49.dll
+0x000000006cbd0000 - 0x000000006cbfc000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_filesystem-vc100-mt-1_49.dll
+0x0000000070240000 - 0x0000000070249000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_system-vc100-mt-1_49.dll
+0x000007fefd9e0000 - 0x000007fefdabb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefe8e0000 - 0x000007fefe97f000 	C:\Windows\system32\msvcrt.dll
+0x000007fefe980000 - 0x000007fefe99f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe7a0000 - 0x000007fefe8cd000 	C:\Windows\system32\RPCRT4.dll
+0x000000006cc00000 - 0x000000006cc25000 	C:\Program Files\MATLAB\R2013b\bin\win64\LIBEXPAT.dll
+0x00000000651f0000 - 0x000000006537a000 	C:\Program Files\MATLAB\R2013b\bin\win64\icuin49.dll
+0x00000000656b0000 - 0x00000000657ee000 	C:\Program Files\MATLAB\R2013b\bin\win64\icuuc49.dll
+0x0000000061210000 - 0x0000000062332000 	C:\Program Files\MATLAB\R2013b\bin\win64\icudt49.dll
+0x000000006cdf0000 - 0x000000006ce00000 	C:\Program Files\MATLAB\R2013b\bin\win64\icuio49.dll
+0x0000000004130000 - 0x00000000041eb000 	C:\Program Files\MATLAB\R2013b\bin\win64\libut.dll
+0x000000006f960000 - 0x000000006fb07000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwfl.dll
+0x00000000042f0000 - 0x00000000046ff000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwMATLAB_res.dll
+0x0000000065110000 - 0x00000000651ef000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_regex-vc100-mt-1_49.dll
+0x0000000077710000 - 0x000000007780a000 	C:\Windows\system32\USER32.dll
+0x000007fefdac0000 - 0x000007fefdb27000 	C:\Windows\system32\GDI32.dll
+0x000007fefe3d0000 - 0x000007fefe3de000 	C:\Windows\system32\LPK.dll
+0x000007fefdb30000 - 0x000007fefdbf9000 	C:\Windows\system32\USP10.dll
+0x0000000066250000 - 0x0000000066261000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_signals-vc100-mt-1_49.dll
+0x0000000065eb0000 - 0x0000000065ec1000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_thread-vc100-mt-1_49.dll
+0x0000000065ce0000 - 0x0000000065d6c000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_log-vc100-mt-1_49.dll
+0x00000000779d0000 - 0x00000000779d7000 	C:\Windows\system32\PSAPI.DLL
+0x000007fefdc00000 - 0x000007fefdc4d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefe8d0000 - 0x000007fefe8d8000 	C:\Windows\system32\NSI.dll
+0x000007fef4b90000 - 0x000007fef4bc3000 	C:\Program Files\MATLAB\R2013b\bin\win64\tbb.dll
+0x000007fefe410000 - 0x000007fefe429000 	C:\Windows\system32\imagehlp.dll
+0x000007fefc150000 - 0x000007fefc17c000 	C:\Windows\system32\POWRPROF.dll
+0x000007fefe540000 - 0x000007fefe717000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd900000 - 0x000007fefd936000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefde90000 - 0x000007fefdf67000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe1c0000 - 0x000007fefe3c3000 	C:\Windows\system32\ole32.dll
+0x000007fefd8a0000 - 0x000007fefd8ba000 	C:\Windows\system32\DEVOBJ.dll
+0x0000000004700000 - 0x00000000047fb000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmx.dll
+0x000007fef7f40000 - 0x000007fef7f68000 	C:\Program Files\MATLAB\R2013b\bin\win64\tbbmalloc.dll
+0x0000000065e90000 - 0x0000000065ea7000 	C:\Program Files\MATLAB\R2013b\bin\win64\zlib1.dll
+0x000000006ef00000 - 0x000000006ef4e000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwregexp.dll
+0x000000006eeb0000 - 0x000000006eef7000 	C:\Program Files\MATLAB\R2013b\bin\win64\mpath.dll
+0x0000000004800000 - 0x0000000004e28000 	C:\Program Files\MATLAB\R2013b\bin\win64\mlutil.dll
+0x000000006e870000 - 0x000000006e8e7000 	C:\Program Files\MATLAB\R2013b\bin\win64\xmlcore.dll
+0x0000000064ec0000 - 0x0000000065101000 	C:\Program Files\MATLAB\R2013b\bin\win64\xerces-c_2_7.dll
+0x000000006e5f0000 - 0x000000006e613000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwMATLAB_settings_res.dll
+0x000000006fc90000 - 0x000000006fca0000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_iostreams-vc100-mt-1_49.dll
+0x0000000065e40000 - 0x0000000065e86000 	C:\Program Files\MATLAB\R2013b\bin\win64\boost_serialization-vc100-mt-1_49.dll
+0x000007fefed90000 - 0x000007feffb18000 	C:\Windows\system32\SHELL32.dll
+0x000007fefdf70000 - 0x000007fefdfe1000 	C:\Windows\system32\SHLWAPI.dll
+0x000000006e580000 - 0x000000006e586000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwnativedisplay.dll
+0x00000000685f0000 - 0x000000006863d000 	C:\Program Files\MATLAB\R2013b\bin\win64\opccore.dll
+0x00000000684f0000 - 0x00000000685c6000 	C:\Program Files\MATLAB\R2013b\bin\win64\opcmodel.dll
+0x00000000684c0000 - 0x00000000684ed000 	C:\Program Files\MATLAB\R2013b\bin\win64\opczippackage.dll
+0x000000006cde0000 - 0x000000006cdee000 	C:\Program Files\MATLAB\R2013b\bin\win64\libminizip.dll
+0x0000000068340000 - 0x00000000683a6000 	C:\Program Files\MATLAB\R2013b\bin\win64\opcmwservices.dll
+0x000007fef9db0000 - 0x000007fef9e50000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.7601.18201_none_a4d3b9377117c3df\COMCTL32.dll
+0x000007fefe9a0000 - 0x000007fefea37000 	C:\Windows\system32\COMDLG32.dll
+0x000007fefa990000 - 0x000007fefa9a6000 	C:\Windows\system32\NETAPI32.dll
+0x000007fefa980000 - 0x000007fefa98c000 	C:\Windows\system32\netutils.dll
+0x000007fefd030000 - 0x000007fefd053000 	C:\Windows\system32\srvcli.dll
+0x000007fefa960000 - 0x000007fefa975000 	C:\Windows\system32\wkscli.dll
+0x000000006e4d0000 - 0x000000006e57d000 	C:\Program Files\MATLAB\R2013b\bin\win64\mcr.dll
+0x000000006e110000 - 0x000000006e4d0000 	C:\Program Files\MATLAB\R2013b\bin\win64\iqm.dll
+0x0000000180000000 - 0x00000001800c2000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_dispatcher.dll
+0x0000000004e40000 - 0x000000000563b000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_interpreter.dll
+0x000000006d760000 - 0x000000006d784000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmex.dll
+0x000000006d6e0000 - 0x000000006d75b000 	C:\Program Files\MATLAB\R2013b\bin\win64\profiler.dll
+0x000000006d450000 - 0x000000006d5c8000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwmathutil.dll
+0x000000006d420000 - 0x000000006d447000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwmathrng.dll
+0x000000006d410000 - 0x000000006d420000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwmfl_rng.dll
+0x0000000005640000 - 0x0000000005758000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwmathcore.dll
+0x000000006d2b0000 - 0x000000006d313000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwspmatrix.dll
+0x0000000005760000 - 0x00000000059c2000 	C:\Program Files\MATLAB\R2013b\bin\win64\mcos.dll
+0x000000006cfc0000 - 0x000000006d01c000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwcholmod.dll
+0x000000006cfb0000 - 0x000000006cfbc000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwamd.dll
+0x000000006cfa0000 - 0x000000006cfab000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwcolamd.dll
+0x000000006cf80000 - 0x000000006cf93000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwblas.dll
+0x000000006cf60000 - 0x000000006cf75000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwbinder.dll
+0x000000006cf50000 - 0x000000006cf5b000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwompwrapper.dll
+0x000000006ced0000 - 0x000000006cf4f000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwlapack.dll
+0x000000006ceb0000 - 0x000000006ced0000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_pcodeio.dll
+0x000000006ce50000 - 0x000000006ceac000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_ir.dll
+0x00000000059d0000 - 0x0000000006085000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_parser.dll
+0x000000006c780000 - 0x000000006c797000 	C:\Program Files\MATLAB\R2013b\bin\win64\ir_xfmr.dll
+0x000000006c770000 - 0x000000006c780000 	C:\Program Files\MATLAB\R2013b\bin\win64\mtok.dll
+0x000000006c740000 - 0x000000006c768000 	C:\Program Files\MATLAB\R2013b\bin\win64\m_pcodegen.dll
+0x000007fef4cb0000 - 0x000007fef4dd5000 	C:\Windows\system32\dbghelp.dll
+0x000000006c710000 - 0x000000006c73f000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwbridge.dll
+0x000000006c650000 - 0x000000006c706000 	C:\Program Files\MATLAB\R2013b\bin\win64\udd.dll
+0x0000000006090000 - 0x00000000061e1000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwgui.dll
+0x000000006c4d0000 - 0x000000006c4f8000 	C:\Program Files\MATLAB\R2013b\bin\win64\graphics_util.dll
+0x0000000064e00000 - 0x0000000064eb8000 	C:\Program Files\MATLAB\R2013b\bin\win64\libtex_base.dll
+0x000000006bac0000 - 0x000000006c426000 	C:\Program Files\MATLAB\R2013b\bin\win64\hg.dll
+0x000000006ba60000 - 0x000000006babd000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmat.dll
+0x000000006b850000 - 0x000000006ba58000 	C:\Program Files\MATLAB\R2013b\bin\win64\hdf5dll.dll
+0x000000006b780000 - 0x000000006b848000 	C:\Program Files\MATLAB\R2013b\bin\win64\jmi.dll
+0x000000006b770000 - 0x000000006b77e000 	C:\Program Files\MATLAB\R2013b\bin\win64\nativejava_services.dll
+0x0000000006200000 - 0x0000000006242000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwhardcopy.dll
+0x000000006b6d0000 - 0x000000006b72e000 	C:\Program Files\MATLAB\R2013b\bin\win64\libuij.dll
+0x000000006b490000 - 0x000000006b695000 	C:\Program Files\MATLAB\R2013b\bin\win64\hgdatatypes.dll
+0x0000000006250000 - 0x0000000006362000 	C:\Program Files\MATLAB\R2013b\bin\win64\hgutils.dll
+0x000000006b2f0000 - 0x000000006b39e000 	C:\Program Files\MATLAB\R2013b\bin\win64\udd_mi.dll
+0x000000006b2b0000 - 0x000000006b2e6000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwgbtutils.dll
+0x000000006b290000 - 0x000000006b2a3000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwgbt.dll
+0x000000006afc0000 - 0x000000006b28f000 	C:\Program Files\MATLAB\R2013b\bin\win64\uiw.dll
+0x000000006afb0000 - 0x000000006afb9000 	C:\Program Files\MATLAB\R2013b\bin\win64\uinone.dll
+0x000000006af80000 - 0x000000006afac000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwnativedialogs.dll
+0x000000006af70000 - 0x000000006af7c000 	C:\Program Files\MATLAB\R2013b\bin\win64\libmwplatform_res.dll
+0x000007fef7860000 - 0x000007fef7878000 	C:\Windows\system32\MPR.dll
+0x00000000648a0000 - 0x0000000064dfd000 	C:\Program Files\MATLAB\R2013b\bin\win64\mfc100.dll
+0x000007fefa6c0000 - 0x000007fefa6c7000 	C:\Windows\system32\MSIMG32.dll
+0x000007fefa240000 - 0x000007fefa2b1000 	C:\Windows\system32\WINSPOOL.DRV
+0x000000006af50000 - 0x000000006af6d000 	C:\Program Files\MATLAB\R2013b\bin\win64\mwoles05.DLL
+0x000000006aee0000 - 0x000000006af4c000 	C:\Program Files\MATLAB\R2013b\bin\win64\comcli.dll
+0x0000000065cb0000 - 0x0000000065cdb000 	C:\Program Files\MATLAB\R2013b\bin\win64\ATL100.DLL
+0x000000006aed0000 - 0x000000006aedc000 	C:\Program Files\MATLAB\R2013b\bin\win64\mlautoregister.dll
+0x0000000006380000 - 0x00000000064ef000 	C:\Program Files\MATLAB\R2013b\bin\win64\mvm.dll
+0x000007fefd420000 - 0x000007fefd477000 	C:\Windows\system32\apphelp.dll
+0x000007fef4ae0000 - 0x000007fef4b31000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x000007fefd3f0000 - 0x000007fefd415000 	C:\Windows\system32\SspiCli.dll
+
+VM Arguments:
+jvm_args: -XX:PermSize=32m -Xms64m -XX:NewRatio=3 -XX:MaxPermSize=128m -Xmx384m -XX:MaxDirectMemorySize=2147400000 -Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Xshare:off -Xrs -XX:-UseSplitVerifier -Djava.library.path=C:\Program Files\MATLAB\R2013b\bin\win64;C:\Program Files\MATLAB\R2013b\sys\jxbrowser\win64\lib vfprintf abort -Duser.language=ja -Duser.country=JP -XX:ParallelGCThreads=6 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\Hewlett-Packard\HP Performance Advisor;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\MATLAB\R2013b\bin;C:\w32tex\bin;C:\Program Files (x86)\gs\gs9.10\bin;C:\Program Files (x86)\gs\gs9.10\lib;C:\Python27;C:\Program Files (x86)\Aspell\bin;
+USERNAME=watanabelab
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 12 (6 cores per cpu, 2 threads per core) family 6 model 62 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 16699204k(12081856k free), swap 33396544k(28852088k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (23.6-b04) for windows-amd64 JRE (1.7.0_11-b21), built on Jan 12 2013 02:38:42 by "java_re" with unknown MS VC++:1600
+
+time: Tue Oct 21 20:04:55 2014
+elapsed time: 4587 seconds
+
